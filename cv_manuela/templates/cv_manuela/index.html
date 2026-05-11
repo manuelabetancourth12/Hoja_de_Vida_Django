@@ -3,52 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuela Betancourth | Software & Multimedia</title>
+    <title>Manuela Betancourth | Portafolio</title>
     <style>
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-        h1 { margin: 0; font-size: 2rem; background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        p { color: #888; margin: 10px 0 20px; }
-        .tech-tag {
-            display: inline-block;
-            background: #222;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin: 5px;
-            border: 1px solid #333;
-        }
-        a { color: #0070f3; text-decoration: none; font-weight: bold; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
+        .header { text-align: center; background: #2d3e50; color: white; padding: 2rem; border-radius: 8px; margin-bottom: 20px; }
+        .section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { color: #2d3e50; border-bottom: 2px solid #2d3e50; padding-bottom: 5px; }
+        .tags span { background: #e2e8f0; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; margin-right: 5px; display: inline-block; margin-top: 5px; }
     </style>
 </head>
 <body>
-    <div class="card">
+
+    <div class="header">
         <h1>Manuela Betancourth</h1>
-        <p>Ingeniería de Software & Desarrollo Multimedia</p>
-        <div>
-            <span class="tech-tag">Django</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">GitFlow</span>
-            <span class="tech-tag">Multimedia</span>
-        </div>
-        <br>
-        <a href="https://github.com/manuelabetancourth12">Ver GitHub →</a>
+        <p>Estudiante de Ingeniería de Software y Multimedia</p>
     </div>
+
+    <div class="section">
+        <h2>Perfil Profesional</h2>
+        <p>Desarrolladora con enfoque en la creación de soluciones de software robustas y experiencias multimedia interactivas. Apasionada por el aprendizaje continuo y la implementación de metodologías ágiles como GitFlow.</p>
+    </div>
+
+    <div class="section">
+        <h2>Habilidades Técnicas</h2>
+        <div class="tags">
+            <span>Python</span>
+            <span>Django</span>
+            <span>Git & GitHub</span>
+            <span>Desarrollo Multimedia</span>
+            <span>HTML5 & CSS3</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Proyectos Destacados</h2>
+        <ul>
+            <li><strong>Portafolio Django:</strong> Implementación de una arquitectura web profesional utilizando el framework Django.</li>
+            <li><strong>Despliegue en Vercel:</strong> Gestión de entornos de producción y despliegue continuo.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contacto</h2>
+        <p>GitHub: <a href="https://github.com/manuelabetancourth12" target="_blank">github.com/manuelabetancourth12</a></p>
+    </div>
+
 </body>
 </html>
