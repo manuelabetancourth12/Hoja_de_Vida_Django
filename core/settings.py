@@ -3,9 +3,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-taller-multimedia-manuela'
+SECRET_KEY = 'django-insecure-taller-final-multimedia'
 DEBUG = True
-ALLOWED_HOSTS = ['hoja-de-vida-django.vercel.app', '.vercel.app', '127.0.0.1', 'localhost']
+
+# PERMISOS PARA VERCEL (Soluciona el error de DisallowedHost)
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -14,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cv_manuela',
+    'cv_manuela', 
 ]
 
 MIDDLEWARE = [
@@ -54,10 +56,9 @@ DATABASES = {
     }
 }
 
-# --- CONFIGURACIÓN DE ARCHIVOS ESTÁTICOS ---
+# CONFIGURACIÓN DE ARCHIVOS ESTÁTICOS
 STATIC_URL = '/static/'
-
-# Esta configuración busca la carpeta static dentro de tu app cv_manuela
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'cv_manuela/static'),
 ]
