@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Portafolio - Manuela Betancourth</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuela Betancourth | Software & Multimedia</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        h1 { margin: 0; font-size: 2rem; background: linear-gradient(to right, #fff, #666); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        p { color: #888; margin: 10px 0 20px; }
+        .tech-tag {
+            display: inline-block;
+            background: #222;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px;
+            border: 1px solid #333;
+        }
+        a { color: #0070f3; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="card">
         <h1>Manuela Betancourth</h1>
-        <p>Estudiante de Ingeniería de Software y Multimedia</p>
-    </header>
-
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Desarrolladora apasionada por el software y el diseño multimedia.</p>
-    </section>
-
-    <section>
-        <h2>Servicios y Tecnologías</h2>
-        <ul>
-            <li>Desarrollo Web (Django, Python, HTML/CSS)</li>
-            <li>Multimedia y Diseño</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Encuéntrame en <a href="https://github.com/manuelabetancourth12">GitHub</a></p>
-    </footer>
+        <p>Ingeniería de Software & Desarrollo Multimedia</p>
+        <div>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">GitFlow</span>
+            <span class="tech-tag">Multimedia</span>
+        </div>
+        <br>
+        <a href="https://github.com/manuelabetancourth12">Ver GitHub →</a>
+    </div>
 </body>
 </html>
