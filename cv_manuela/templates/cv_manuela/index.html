@@ -3,246 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuela Betancourth | Software & Multimedia</title>
+    <title>Manuela Betancourth | Portafolio Profesional</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist.min.css">
     <style>
         :root {
-            --bg-color: #000000;
-            --card-bg: #111111;
-            --text-primary: #ffffff;
-            --text-secondary: #888888;
+            --bg: #000000;
+            --card: #111111;
+            --text: #ffffff;
+            --gray: #888888;
             --accent: #0070f3;
             --border: #333333;
         }
 
         body {
             font-family: 'Geist Sans', -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            padding: 2rem 1rem;
         }
 
-        .container {
-            max-width: 750px;
-            width: 100%;
-        }
+        .container { max-width: 800px; width: 100%; }
 
-        /* Sección Hero */
-        .hero {
+        /* Header con tu foto */
+        header {
             display: flex;
             align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
+            gap: 30px;
+            padding-bottom: 40px;
             border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
         }
 
-        .avatar {
-            width: 120px;
-            height: 120px;
+        .profile-img {
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            object-fit: cover;
             border: 2px solid var(--border);
+            object-fit: cover;
         }
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
+        .header-info h1 { font-size: 2.5rem; margin: 0; letter-spacing: -1px; }
+        .header-info p { color: var(--gray); font-size: 1.1rem; margin: 5px 0; }
 
-        .hero-text p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin: 5px 0 15px;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--text-primary);
-            color: var(--bg-color);
-        }
-
-        .btn-primary:hover {
-            background-color: #ccc;
-        }
-
-        .btn-secondary {
-            background-color: var(--card-bg);
-            color: var(--text-primary);
+        /* Secciones */
+        section { margin-bottom: 50px; }
+        h2 { font-size: 1.5rem; margin-bottom: 20px; color: var(--text); }
+        .card {
+            background: var(--card);
             border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background-color: #222;
-        }
-
-        /* Estilo de Secciones */
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-card {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
+            padding: 25px;
             border-radius: 12px;
+            line-height: 1.6;
+        }
+
+        /* Stack Tecnológico */
+        .tech-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tech-tag {
+            background: #222;
             border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-family: monospace;
         }
 
-        .profile-text {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        /* Grid de Servicios y Tecnologías */
-        .grid {
+        /* Servicios */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 20px;
         }
-
-        .grid-item {
-            background-color: var(--card-bg);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
+        .service-item {
             border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
         }
+        .service-item h3 { font-size: 1rem; margin-bottom: 10px; }
+        .service-item p { font-size: 0.9rem; color: var(--gray); }
 
-        .tech-tag {
-            background-color: #222;
-            color: var(--text-primary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: monospace;
-            margin: 4px;
+        .contact-btn {
             display: inline-block;
-            border: 1px solid #333;
-        }
-
-        /* Proyectos */
-        .project-card {
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            margin: 0 0 5px;
-            font-size: 1.1rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            margin: 0;
-            font-size: 0.95rem;
+            background: var(--text);
+            color: var(--bg);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
         }
 
         @media (max-width: 600px) {
-            .hero { flex-direction: column; text-align: center; gap: 1rem; }
-            .hero-text h1 { font-size: 2rem; }
+            header { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="hero">
-            <img src="https://avatars.githubusercontent.com/u/163273187?v=4" alt="Manuela Betancourth" class="avatar">
-            <div class="hero-text">
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/163273187?v=4" alt="Manuela Betancourth" class="profile-img">
+            <div class="header-info">
                 <h1>Manuela Betancourth</h1>
-                <p>Software Engineer & Multimedia Developer | Pasto, Nariño</p>
-                <div class="contact-links">
-                    <a href="mailto:manubeta2006@gmail.com" class="btn btn-primary">Contactar</a>
-                    <a href="https://github.com/manuelabetancourth12" target="_blank" class="btn btn-secondary">GitHub</a>
-                </div>
+                <p>Ingeniería de Software & Desarrollo Multimedia</p>
+                <p style="font-size: 0.9rem;">📍 Pasto, Nariño | ✉️ manubeta2006@gmail.com</p>
+                <a href="https://github.com/manuelabetancourth12" class="contact-btn">Ver GitHub</a>
             </div>
         </header>
 
         <section>
-            <h2>Perfil Profesional</h2>
-            <div class="section-card">
-                <p class="profile-text">
-                    Desarrolladora enfocada en interfaces modernas, funcionales y centradas en el usuario. Soy estudiante de Ingeniería de Software y tecnóloga en Desarrollo Multimedia y Web. Me enfoco en crear experiencias digitales innovadoras con tecnologías modernas.
-                </p>
+            <h2>Sobre mí</h2>
+            <div class="card">
+                <p style="margin:0;">Desarrolladora enfocada en interfaces modernas, funcionales y centradas en el usuario. Soy estudiante de Ingeniería de Software y tecnóloga en Desarrollo Multimedia y Web. Me enfoco en crear experiencias digitales innovadoras con tecnologías modernas.</p>
             </div>
         </section>
 
         <section>
-            <h2>Servicios y Especialidades</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h4>Desarrollo Web Frontend</h4>
-                    <p class="profile-text">Interfaces modernas con React, Next.js y Tailwind CSS.</p>
+            <h2>Servicios Profesionales</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Desarrollo Web</h3>
+                    <p>Aplicaciones escalables con Django y React.</p>
                 </div>
-                <div class="grid-item">
-                    <h4>Desarrollo Backend</h4>
-                    <p class="profile-text">Lógica robusta y APIs con Python y Django.</p>
+                <div class="service-item">
+                    <h3>Diseño Multimedia</h3>
+                    <p>Interfaces centradas en el usuario y multimedia interactiva.</p>
                 </div>
-                <div class="grid-item">
-                    <h4>Producción Multimedia</h4>
-                    <p class="profile-text">Creación de experiencias digitales e interactivas.</p>
+                <div class="service-item">
+                    <h3>Consultoría Técnica</h3>
+                    <p>Optimización de flujos con Git y metodologías ágiles.</p>
                 </div>
             </div>
         </section>
 
         <section>
             <h2>Stack Tecnológico</h2>
-            <div class="section-card" style="text-align: center;">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JAVASCRIPT</span>
-                <span class="tech-tag">TYPESCRIPT</span>
-                <span class="tech-tag">PYTHON</span>
-                <span class="tech-tag">DJANGO</span>
-                <span class="tech-tag">REACT</span>
-                <span class="tech-tag">NEXT.JS</span>
-                <span class="tech-tag">TAILWIND CSS</span>
-                <span class="tech-tag">GIT</span>
-                <span class="tech-tag">GITHUB</span>
+            <div class="tech-grid">
+                <span class="tech-tag">HTML</span> <span class="tech-tag">CSS</span> 
+                <span class="tech-tag">JAVASCRIPT</span> <span class="tech-tag">PYTHON</span>
+                <span class="tech-tag">REACT</span> <span class="tech-tag">NEXT.JS</span> 
+                <span class="tech-tag">TAILWIND CSS</span> <span class="tech-tag">TYPESCRIPT</span> 
+                <span class="tech-tag">DJANGO</span> <span class="tech-tag">GIT</span> <span class="tech-tag">GITHUB</span>
             </div>
         </section>
 
         <section>
-            <h2>Proyectos Destacados</h2>
-            <div class="section-card">
-                <div class="project-card">
-                    <h3>Portafolio Profesional Django</h3>
-                    <p>Implementación de arquitectura web y control de versiones con GitFlow (este proyecto).</p>
-                </div>
-                <hr style="border-color: #333; margin: 1.5rem 0;">
-                <div class="project-card">
-                    <h3>Plataforma Multimedia Interactiva</h3>
-                    <p>Desarrollo frontend centrado en la experiencia del usuario (UX/UI).</p>
-                </div>
+            <h2>Proyectos en este Taller</h2>
+            <div class="card">
+                <ul style="margin:0; padding-left: 20px;">
+                    <li><strong>Estructura Django:</strong> Configuración de arquitectura MVT.</li>
+                    <li><strong>Flujo GitFlow:</strong> Gestión de ramas develop, feature y master.</li>
+                    <li><strong>Despliegue Vercel:</strong> Configuración de CI/CD para producción.</li>
+                </ul>
             </div>
         </section>
-
     </div>
 </body>
 </html>
